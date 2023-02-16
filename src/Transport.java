@@ -10,7 +10,13 @@ public abstract class Transport <T extends Driver> implements Competing{
 
     private ArrayList <Mechanic> mechanic;
 
+    public void addMechanic (Mechanic mechanic){
+        this.mechanic.add(mechanic);
+        System.out.println(getBrand() + " обслуживает " + mechanic.getName());
+    }
+
     public ArrayList<Mechanic> getMechanic() {
+
         return new ArrayList<>(mechanic);
     }
 
